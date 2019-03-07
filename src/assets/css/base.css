@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size:0.18rem;
+}
+
+body,html,#app,#home{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #0B0F28;
+    font-family:MicrosoftYaHei;
+    position: relative;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -khtml-user-select:none;
+    user-select:none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+a{
+    color: #000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+li{
+    list-style:none;
+}
+input{
+    display: block;
+    outline: none;
+    border: none;
+    background: none;
+}
+.title{
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.1rem;
+}
+.title img{
+    width: 0.45rem;
+    height: 0.4rem;
+    padding-right: 0.08rem;
+}
+.title span{
+    color: #1297EC;
+    font-size: 0.3rem;
+}

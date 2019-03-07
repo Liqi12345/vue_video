@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>screen</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+      function setRem(doc, win) {
+          let docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function () {
+                  let clientHeight = docEl.clientHeight;
+                  let clientWidth = docEl.clientWidth;
+                  if(clientWidth>(clientHeight*16/9))
+                  {
+                      doc.getElementsByTagName("html")[0].style.fontSize = 16*clientHeight*6.25/1080 +'px';
+                  }
+                  else
+                  {
+                      doc.getElementsByTagName("html")[0].style.fontSize = 16*clientWidth*6.25/1920 +'px';
+                  }
+
+              };
+
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      }
+      window.onload = setRem(document,window);
+      if(document.body.clientWidth < 500){
+
+          window.location.href = 'http://118.24.197.138/home/#/'
+      }
+      window.onresize = function(){
+          console.log(document.body.clientWidth)
+          if(document.body.clientWidth < 500){
+
+              window.location.href = 'http://118.24.197.138/home/#/'
+          }
+      }
+
+
+
+  </script>
+    <noscript>
+      <strong>We're sorry but screen doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script></script>
